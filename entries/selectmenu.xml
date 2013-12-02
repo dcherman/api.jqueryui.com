@@ -7,7 +7,7 @@
 
 		<p>It supports optgroups and custom markup to render specific presentations like multiple lines.</p>
 
-		<p>The select or its options can be disabled by adding the <code>disbaled="disabled"</code> attribite to that element.</p>
+		<p>The select or its options can be disabled by adding the <code>disabled</code> attribute to that element.</p>
 
 		<h3>Keyboard interaction</h3>
 
@@ -119,14 +119,14 @@
 	<example>
 		<desc>A simple jQuery UI Selectmenu</desc>
 		<code><![CDATA[
-$('#speed').selectmenu();
+$( "#speed" ).selectmenu();
 ]]></code>
 		<html><![CDATA[
 <label for="speed">Select a speed:</label>
 <select name="speed" id="speed">
 	<option value="Slower">Slower</option>
 	<option value="Slow">Slow</option>
-	<option value="Medium" selected="selected">Medium</option>
+	<option value="Medium" selected>Medium</option>
 	<option value="Fast">Fast</option>
 	<option value="Faster">Faster</option>
 </select>
@@ -139,7 +139,7 @@ $('#speed').selectmenu();
 	<example>
 		<desc>A simple jQuery UI Selectmenu with optgroups</desc>
 		<code><![CDATA[
-$('#files').selectmenu();
+$( "#files" ).selectmenu();
 ]]></code>
 		<html><![CDATA[
 <label for="files">Select a file:</label>
@@ -162,13 +162,16 @@ $('#files').selectmenu();
 	<example>
 		<desc>A jQuery UI Selectmenu with overflow</desc>
 		<code><![CDATA[
-$('#number').selectmenu().selectmenu("menuWidget").addClass("overflow");
+$( "#number" )
+	.selectmenu()
+	.selectmenu( "menuWidget" )
+	.addClass( "overflow" );
 ]]></code>
 		<html><![CDATA[
 <label for="number">Select a number:</label>
 <select name="number" id="number">
 	<option value="1">1</option>
-	<option value="2" selected="selected">2</option>
+	<option value="2" selected>2</option>
 	<option value="3">3</option>
 	<option value="4">4</option>
 	<option value="5">5</option>
