@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <entry name="selectmenu" type="widget">
 	<title>Selectmenu Widget</title>
-	<desc>A jQuery UI widget that duplicates and extends the functionality of a native HTML select element, allowing it to be customizable in behavior and appearance far beyond the limitations of a native select.</desc>
+	<desc>Duplicates and extends the functionality of a native HTML select element to overcome the limitations of the native control.</desc>
 	<longdesc>
-		<p>Selectmenu Widget will act as a proxy back to the original select element, controlling its state for form submission or serialization.</p>
+		<p>Selectmenu acts as a proxy back to the original <code>&lt;select&gt;</code> element. For example it controls the <code>&lt;select&gt;</code> element's state for form submission and serialization.</p>
 
-		<p>It supports optgroups and custom markup to render specific presentations like multiple lines.</p>
+		<p>Selectmenu supports <code>&lt;optgroup&gt;</code> elements and custom markup to render specific presentations like multiple lines.</p>
 
-		<p>The select or its options can be disabled by adding the <code>disabled</code> attribute to that element.</p>
+		<p>The <code>&lt;select&gt;</code> or its options can be disabled by adding the <code>disabled</code> attribute.</p>
 
 		<h3>Keyboard interaction</h3>
 
@@ -17,9 +17,9 @@
 			<li>DOWN/RIGHT - Move focus to the next item. If on last item, move focus to the first item.</li>
 			<li>END/PAGE DOWN - Focus last item.</li>
 			<li>HOME/PAGE UP - Focus first item.</li>
-			<li>ESCAPE - Close the select.</li>
-			<li>ENTER/SPACE - Select the currently focused item and close the select.</li>
-			<li>ALT+UP/DOWN - Toggle select.</li>
+			<li>ESCAPE - Close the menu.</li>
+			<li>ENTER/SPACE - Select the currently focused item and close the menu.</li>
+			<li>ALT+UP/DOWN - Toggle menu.</li>
 		</ul>
 
 		<p>When the menu is closed, the following key commands are available:</p>
@@ -28,7 +28,7 @@
 			<li>DOWN/RIGHT - Select the next item. If on last item, select the first item.</li>
 			<li>END/PAGE DOWN - Select last item.</li>
 			<li>HOME/PAGE UP - Select first item.</li>
-			<li>ALT+UP/DOWN - Toggle select.</li>
+			<li>ALT+UP/DOWN - Toggle menu.</li>
 			<li>SPACE - Open menu.</li>
 		</ul>
 	</longdesc>
@@ -36,24 +36,24 @@
 	<added>1.11</added>
 	<options>
 		<option name="appendTo" type="Selector" default="null" example-value='"#someElem"'>
-			<desc>Which element the menu should be appended to. When the value is <code>null</code>, the parents of the input field will be checked for a class of <code>ui-front</code>. If an element with the <code>ui-front</code> class is found, the menu will be appended to that element. Regardless of the value, if no element is found, the menu will be appended to the body.</desc>
+			<desc>Which element the menu should be appended to. When the value is <code>null</code>, the parents of the <code>&lt;select&gt;</code> will be checked for a class name of <code>ui-front</code>. If an element with the <code>ui-front</code> class name is found, the menu will be appended to that element. Regardless of the value, if no element is found, the menu will be appended to the <code>&lt;body&gt;</code>.</desc>
 		</option>
 		<xi:include href="../includes/widget-option-disabled.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<option name="icons" type="Object" default='{ button: "ui-icon-triangle-1-s" }' example-value='{ button: "ui-icon-circle-triangle-s" }'>
 			<desc>
-				Icons to use for button, matching an icon defined by the jQuery UI CSS Framework.
+				Icons to use for the button, matching an icon defined by the jQuery UI CSS Framework.
 				<ul>
 					<li>button (string, default: "ui-icon-triangle-1-s")</li>
 				</ul>
 			</desc>
 		</option>
 		<option name="position" type="Object" default='{ my: "left top", at: "left bottom", collision: "none" }' example-value='{ my : "left+10 center", at: "right center" }'>
-			<desc>Identifies the position of the menu in relation to the associated button element. Please note position option <code>my</code> and <code>at</code> will be overwritten if option <code>dropdown</code> is set to <code>false</code>. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
+			<desc>Identifies the position of the menu in relation to the associated button element. You can refer to the <a href="/position">jQuery UI Position</a> utility for more details about the various options.</desc>
 		</option>
 	</options>
 	<events>
 		<event name="change">
-			<desc>Triggered when the selected item has changed. Not every <code>select</code> event will fire an <code>change</code> event.</desc>
+			<desc>Triggered when the selected item has changed. Not every <code>select</code> event will fire a <code>change</code> event.</desc>
 			<argument name="event" type="Event"/>
 			<argument name="ui" type="Object">
 				<property name="item" type="jQuery">
@@ -109,7 +109,7 @@
 		<xi:include href="../includes/widget-method-option.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 		<method name="refresh">
 			<desc>
-				Parses the original element again and rerenders the menu. New options or optgroups can be added, removed or disabled.
+				Parses the original element and re-renders the menu. New <code>&lt;option&gt;</code> or <code>&lt;optgroup&gt;</code> elements can be added, removed or disabled.
 			</desc>
 		</method>
 		<method name="widget">
